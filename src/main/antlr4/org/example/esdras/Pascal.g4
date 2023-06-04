@@ -38,7 +38,7 @@ comando : READ PARENTESES_ESQUERDO var_read PARENTESES_DIREITO |
           DO BEGIN sentencas END {System.out.println("A29");} |
           REPEAT {System.out.println("A23");} sentencas UNTIL PARENTESES_ESQUERDO condicao PARENTESES_DIREITO {System.out.println("A24");}  |
           WHILE {System.out.println("A20");} PARENTESES_ESQUERDO condicao PARENTESES_DIREITO {System.out.println("A21");}  DO BEGIN sentencas END {System.out.println("A22");} |
-          IF PARENTESES_ESQUERDO condicao PARENTESES_DIREITO {System.out.println("A17");} THEN BEGIN sentencas END {System.out.println("A18");} |
+          IF PARENTESES_ESQUERDO condicao PARENTESES_DIREITO {System.out.println("A17");} THEN BEGIN sentencas END {System.out.println("A18");}
           pfalsa? {System.out.println("A19");} |
           id {System.out.println("A13");} DOIS_PONTOS_IGUAL expressao {System.out.println("A14");};
 
@@ -63,25 +63,26 @@ intnum :  DIGITO+ {System.out.println("A4");};
 id : IDENTIFICADOR  {System.out.println("A3");};
 
 
-READ : 'read';
-PROGRAM  : 'program';
-FOR : 'for';
-REPEAT : 'repeat';
-WHILE : 'while';
-IF : 'if';
-TO : 'to';
-UNTIL : 'until';
-DO : 'do';
-BEGIN : 'begin';
-ELSE : 'else';
-THEN : 'then';
-END : 'end';
-VAR : 'var';
+
+READ : R E A D;
+PROGRAM  : P R O G R A M;
+FOR : F O R;
+REPEAT : R E P E A T;
+WHILE : W H I L E;
+IF : I F;
+TO : T O;
+UNTIL : U N T I L;
+DO : D O;
+BEGIN : B E G I N;
+ELSE : E L S E;
+THEN : T H E N;
+END : E N D;
+VAR : V A R;
+INTEGER : I N T E G E R;
+WRITE : W R I T E;
 VIRGULA : ',';
 LETRA : [A-Za-z];
 DIGITO : [0-9];
-INTEGER : 'integer' ;
-WRITE : 'write';
 PONTO_VIRGULA : ';';
 PARENTESES_DIREITO : ')';
 PARENTESES_ESQUERDO : '(';
@@ -102,3 +103,29 @@ IDENTIFICADOR    : [a-zA-Z] ([a-zA-Z] | [0-9])* ;
 WS : [ \t\r\n]+ -> skip ;
 COMMENT : '{' .*? '}' -> skip;
 LCOMMENT : '//' .*? '\r'? '\n' -> skip ;
+fragment A : [aA];
+fragment B : [bB];
+fragment C : [cC];
+fragment D : [dD];
+fragment E : [eE];
+fragment F : [fF];
+fragment G : [gG];
+fragment H : [hH];
+fragment I : [iI];
+fragment J : [jJ];
+fragment K : [kK];
+fragment L : [lL];
+fragment M : [mM];
+fragment N : [nN];
+fragment O : [oO];
+fragment P : [pP];
+fragment Q : [qQ];
+fragment R : [rR];
+fragment S : [sS];
+fragment T : [tT];
+fragment U : [uU];
+fragment V : [vV];
+fragment W : [wW];
+fragment X : [xX];
+fragment Y : [yY];
+fragment Z : [zZ];

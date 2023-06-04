@@ -14,7 +14,7 @@ public class App
     public static void main( String[] args ) throws IOException {
 
         String nomeArquivo = "teste.pas";
-        substituirTabulacao(nomeArquivo);
+        //substituirTabulacao(nomeArquivo);
         String content = new String(Files.readAllBytes(Paths.get(nomeArquivo)));
         System.out.println(content.toString());
         Compilador compilador = new Compilador(content);
